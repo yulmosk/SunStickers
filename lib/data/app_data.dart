@@ -28,6 +28,7 @@ class AppData {
       5.0,
       StickerType.fruit,
       150,
+      false,
     ),
     Sticker(
       2,
@@ -40,6 +41,7 @@ class AppData {
       3.5,
       StickerType.toy,
       652,
+      false,
     ),
     Sticker(
       3,
@@ -52,6 +54,7 @@ class AppData {
       4.0,
       StickerType.toy,
       723,
+      false,
     ),
     Sticker(
       4,
@@ -64,6 +67,7 @@ class AppData {
       2.5,
       StickerType.toy,
       456,
+      false,
     ),
     Sticker(
       5,
@@ -76,6 +80,7 @@ class AppData {
       4.5,
       StickerType.berry,
       650,
+      false,
     ),
     Sticker(
       6,
@@ -88,6 +93,7 @@ class AppData {
       1.5,
       StickerType.plant,
       350,
+      false,
     ),
     Sticker(
       7,
@@ -100,6 +106,7 @@ class AppData {
       3.5,
       StickerType.fauna,
       265,
+      false,
     ),
     Sticker(
       8,
@@ -112,6 +119,7 @@ class AppData {
       4.0,
       StickerType.fauna,
       890,
+      false,
     ),
     Sticker(
       9,
@@ -124,6 +132,7 @@ class AppData {
       5.0,
       StickerType.fauna,
       900,
+      false,
     ),
     Sticker(
       10,
@@ -136,6 +145,7 @@ class AppData {
       3.5,
       StickerType.plant,
       420,
+      false,
     ),
     Sticker(
       11,
@@ -148,6 +158,7 @@ class AppData {
       3.0,
       StickerType.fauna,
       263,
+      false,
     ),
     Sticker(
       12,
@@ -160,6 +171,7 @@ class AppData {
       5.0,
       StickerType.plant,
       560,
+      false,
     ),
     Sticker(
       13,
@@ -172,6 +184,7 @@ class AppData {
       2.5,
       StickerType.other,
       361,
+      false,
     ),
     Sticker(
       14,
@@ -184,6 +197,7 @@ class AppData {
       4.5,
       StickerType.other,
       915,
+      false,
     ),
     Sticker(
       15,
@@ -196,6 +210,7 @@ class AppData {
       3.5,
       StickerType.fruit,
       210,
+      false,
     ),
     Sticker(
       16,
@@ -208,6 +223,7 @@ class AppData {
       4.0,
       StickerType.fauna,
       304,
+      false,
     ),
     Sticker(
       17,
@@ -220,6 +236,7 @@ class AppData {
       4.5,
       StickerType.fauna,
       356,
+      false,
     ),
     Sticker(
       18,
@@ -232,6 +249,7 @@ class AppData {
       3.0,
       StickerType.fauna,
       203,
+      false,
     ),
     Sticker(
       19,
@@ -244,6 +262,7 @@ class AppData {
       1.0,
       StickerType.toy,
       278,
+      false,
     ),
     Sticker(
       20,
@@ -256,6 +275,7 @@ class AppData {
       1.5,
       StickerType.toy,
       734,
+      false,
     ),
     Sticker(
       21,
@@ -268,6 +288,7 @@ class AppData {
       2.5,
       StickerType.other,
       671,
+      false,
     ),
     Sticker(
       22,
@@ -280,6 +301,7 @@ class AppData {
       3.5,
       StickerType.berry,
       567,
+      false,
     ),
   ];
 

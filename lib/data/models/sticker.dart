@@ -11,6 +11,7 @@ class Sticker {
   double score;
   StickerType type;
   int voter;
+  bool cart;
 
   Sticker(
     this.id,
@@ -23,5 +24,6 @@ class Sticker {
     this.score,
     this.type,
     this.voter,
+    this.cart,
   );
 }
