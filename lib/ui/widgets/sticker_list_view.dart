@@ -12,6 +12,10 @@ class StickerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('Проверяем количество стикеров которые пришли в компонент ${stickers}');
+    for (var i = 0; i < stickers.length; i++) {
+      debugPrint('Имя стикера ${stickers[i].name}');
+    }
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return SizedBox(
       height: 200,
@@ -29,6 +33,7 @@ class StickerListView extends StatelessWidget {
                 width: 160,
                 decoration: BoxDecoration(
                   color: isDark ? AppColor.dark : Colors.white,
+                  //color: Colors.red,
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
                 ),
                 child: Padding(
@@ -56,7 +61,7 @@ class StickerListView extends StatelessWidget {
               width: 50,
             );
           },
-          itemCount: 20),
+          itemCount: stickers.length),
     );
   }
 }
