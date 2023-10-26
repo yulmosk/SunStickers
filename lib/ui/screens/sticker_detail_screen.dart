@@ -46,7 +46,7 @@ class StickerDetailState extends State<StickerDetail> {
       elevation: 0.0,
       backgroundColor: AppColor.accent,
       onPressed: () {},
-      child: sticker.isFavorite ? const Icon(AppIcon.heart) : const Icon(AppIcon.outlinedHeart),
+      child: sticker.favorite ? const Icon(AppIcon.heart) : const Icon(AppIcon.outlinedHeart),
     );
   }
 

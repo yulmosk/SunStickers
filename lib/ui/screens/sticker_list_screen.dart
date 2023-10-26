@@ -16,11 +16,14 @@ class StickerList extends StatefulWidget {
 class StickerListState extends State<StickerList> {
   var categories = AppData.categories;
 
-  void onCategoryTap(int selectedIndex) {
-    //Меняем выбранную категорию
-    categories.asMap().forEach((index, category) {
-      category.isSelected = index == selectedIndex;
-    });
+  void onCategoryTap(StickerCategory category) {
+    categories.map((e) {
+      if (e.type == category.type) {
+        e.isSelected = true;
+      } else {
+        e.isSelected = false;
+      }
+    }).toList();
     setState(() {});
   }
 
@@ -133,7 +136,7 @@ class StickerListState extends State<StickerList> {
               final category = categories[index];
               return GestureDetector(
                 onTap: () {
-                  onCategoryTap(index);
+                  onCategoryTap(category);
                 },
                 child: Container(
                   width: 100,

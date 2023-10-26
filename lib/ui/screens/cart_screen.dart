@@ -14,6 +14,7 @@ class CartScreen extends StatefulWidget {
 
 class CartScreenState extends State<CartScreen> {
   var cartItems = AppData.cartItems;
+  double taxes = 5.0;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class CartScreenState extends State<CartScreen> {
         isEmpty: cartItems.isEmpty,
         child: _cartListView(),
       ),
-      bottomNavigationBar: _bottomAppBar(),
+      bottomNavigationBar: cartItems.isEmpty? const SizedBox.shrink() : _bottomAppBar(),
     );
   }
 
@@ -170,7 +171,7 @@ class CartScreenState extends State<CartScreen> {
                                 style: Theme.of(context).textTheme.headlineSmall,
                               ),
                               Text(
-                                "\$${5.00}",
+                                "\$${taxes}",
                                 style: Theme.of(context).textTheme.displayMedium,
                               ),
                             ],

@@ -4,5 +4,5 @@ class StickerCategory {
   final StickerType type;
   bool isSelected;
 
-  StickerCategory(this.type, this.isSelected);
+  StickerCategory({required this.type, required this.isSelected});
 }
