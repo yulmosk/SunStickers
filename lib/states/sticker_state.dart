@@ -8,10 +8,6 @@ class StickerState {
   static final _instance = StickerState._();
   factory StickerState() => _instance;
 
-  //Ключи
-  GlobalKey<CartScreenState> cartKey = GlobalKey();
-  GlobalKey<FavoriteScreenState> favoriteKey = GlobalKey();
-
   //Переменные
   List<StickerCategory> categories = AppData.categories;
   List<Sticker> stickers = AppData.stickers;

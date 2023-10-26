@@ -5,14 +5,8 @@ import '../../data/_data.dart';
 import '../../ui_kit/_ui_kit.dart';
 import '../_ui.dart';
 
-class CartScreen extends StatefulWidget {
-  const CartScreen({super.key});
-
-  @override
-  State<CartScreen> createState() => CartScreenState();
-}
-
-class CartScreenState extends State<CartScreen> {
+class CartScreen extends StatelessWidget {
+  CartScreen({super.key});
   var cartItems = AppData.cartItems;
   double taxes = 5.0;
 
@@ -23,9 +17,9 @@ class CartScreenState extends State<CartScreen> {
       body: EmptyWrapper(
         title: "Empty cart",
         isEmpty: cartItems.isEmpty,
-        child: _cartListView(),
+        child: _cartListView(context),
       ),
-      bottomNavigationBar: cartItems.isEmpty? const SizedBox.shrink() : _bottomAppBar(),
+      bottomNavigationBar: cartItems.isEmpty? const SizedBox.shrink() : _bottomAppBar(context),
     );
   }
 
@@ -38,7 +32,7 @@ class CartScreenState extends State<CartScreen> {
     );
   }
 
-  Widget _cartListView() {
+  Widget _cartListView(BuildContext context) {
     return ListView.separated(
       padding: const EdgeInsets.all(30),
       itemCount: cartItems.length,
@@ -128,7 +122,7 @@ class CartScreenState extends State<CartScreen> {
     );
   }
 
-  Widget _bottomAppBar() {
+  Widget _bottomAppBar(BuildContext context) {
     return ClipRRect(
       borderRadius: const BorderRadius.only(
         topLeft: Radius.circular(30),

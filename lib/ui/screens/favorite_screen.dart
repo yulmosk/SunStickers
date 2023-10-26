@@ -4,14 +4,8 @@ import '../../data/_data.dart';
 import '../../ui_kit/_ui_kit.dart';
 import '../_ui.dart';
 
-class FavoriteScreen extends StatefulWidget {
-  const FavoriteScreen({super.key});
-
-  @override
-  State<FavoriteScreen> createState() => FavoriteScreenState();
-}
-
-class FavoriteScreenState extends State<FavoriteScreen> {
+class FavoriteScreen extends StatelessWidget {
+  FavoriteScreen({super.key});
   var favoriteItems = AppData.favoriteItems;
 
   @override
@@ -22,7 +16,7 @@ class FavoriteScreenState extends State<FavoriteScreen> {
         type: EmptyWrapperType.favorite,
         title: "Empty favorite",
         isEmpty: favoriteItems.isEmpty,
-        child: _favoriteListView(),
+        child: _favoriteListView(context),
       ),
     );
   }
@@ -36,7 +30,7 @@ class FavoriteScreenState extends State<FavoriteScreen> {
     );
   }
 
-  Widget _favoriteListView() {
+  Widget _favoriteListView(BuildContext context) {
     return ListView.separated(
       padding: const EdgeInsets.all(30),
       itemCount: favoriteItems.length,
