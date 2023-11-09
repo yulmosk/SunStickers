@@ -18,13 +18,14 @@ class StickerState {
 
   //Действия
   Future<void> onCategoryTap(StickerCategory category) async {
-    categories.map((e) {
+    categories = categories.map((e) {
       if (e.type == category.type) {
-        e.isSelected = true;
+        return e.copyWith(isSelected: true);
       } else {
-        e.isSelected = false;
+        return e.copyWith(isSelected: false);
       }
     }).toList();
+
     if (category.type == StickerType.all) {
       stickersByCategory = stickers;
     } else {
@@ -32,41 +33,87 @@ class StickerState {
     }
   }
 
-  Future<void> onIncreaseQuantityTap(Sticker sticker) async {
-    sticker.quantity++;
+  Future<void> onIncreaseQuantityTap(int stickerId) async {
+    stickers = stickers.map((e) {
+      if (e.id == stickerId) {
+        return e.copyWith(quantity: e.quantity + 1);
+      } else {
+        return e;
+      }
+    }).toList();
   }
 
-  Future<void> onDecreaseQuantityTap(Sticker sticker) async {
-    if (sticker.quantity == 1) return;
-    sticker.quantity--;
+  Future<void> onDecreaseQuantityTap(int stickerId) async {
+    stickers = stickers.map((e) {
+      if (e.id == stickerId) {
+        return e.quantity == 1 ? e : e.copyWith(quantity: e.quantity - 1);
+      } else {
+        return e;
+      }
+    }).toList();
   }
 
-  Future<void> onAddToCartTap(Sticker sticker) async {
-    sticker.cart = true;
+  Future<void> onAddToCartTap(int stickerId) async {
+    stickers = stickers.map((e) {
+      if (e.id == stickerId) {
+        return e.copyWith(cart: true);
+      } else {
+        return e;
+      }
+    }).toList();
     cart = stickers.where((e) => e.cart).toList();
   }
 
-  Future<void> onRemoveFromCartTap(Sticker sticker) async {
-    sticker.cart = false;
-    sticker.quantity = 1;
+  Future<void> onRemoveFromCartTap(int stickerId) async {
+    stickers = stickers.map((e) {
+      if (e.id == stickerId) {
+        return e.copyWith(cart: false, quantity: 1);
+      } else {
+        return e;
+      }
+    }).toList();
     cart = stickers.where((e) => e.cart).toList();
   }
 
   Future<void> onCheckOutTap() async {
-    for (var e in cart) {
-      e.cart = false;
-      e.quantity = 1;
+    Set<int> cartIds = <int>{};
+    for (var item in cart) {
+      cartIds.add(item.id);
     }
+    stickers = stickers.map((e) {
+      if (cartIds.contains(e.id)) {
+        return e.copyWith(cart: false, quantity: 1);
+      } else {
+        return e;
+      }
+    }).toList();
     cart = stickers.where((e) => e.cart).toList();
   }
 
-  Future<void> onAddRemoveFavoriteTap(Sticker sticker) async {
-    sticker.favorite = !sticker.favorite;
+  Future<void> onAddRemoveFavoriteTap(int stickerId) async {
+    stickers = stickers.map((e) {
+      if (e.id == stickerId) {
+        return e.copyWith(favorite: !e.favorite);
+      } else {
+        return e;
+      }
+    }).toList();
     favorite = stickers.where((e) => e.favorite).toList();
   }
 
   void toggleTheme() {
     light = !light;
+  }
+
+  //List<Sticker> get cart => stickers.where((e) => e.cart).toList();
+  //List<Sticker> get favorite => stickers.where((e) => e.favorite).toList();
+
+  int getIndex(int stickerId) {
+    int index = stickers.indexWhere((e) => e.id == stickerId);
+    return index;
+  }
+  Sticker getStickerById(int stickerId) {
+    return stickers[getIndex(stickerId)];
   }
 
   //Вспомогательные  методы
@@ -81,6 +128,7 @@ class StickerState {
     }
     return amount;
   }
+
 
   //BLoC, Cubit, GetX, MobX, Provider, Riverpod, Redux
 

@@ -341,8 +341,8 @@ class AppData {
 
   static List<Sticker> cartItems = [stickers[0], stickers[1], stickers[2]];
   static List<Sticker> favoriteItems = [
-    stickers[0]..favorite = true,
-    stickers[1]..favorite = true,
-    stickers[2]..favorite = true
+    stickers[0].copyWith(favorite: true),
+    stickers[1].copyWith(favorite: true),
+    stickers[2].copyWith(favorite: true)
   ];
 }
