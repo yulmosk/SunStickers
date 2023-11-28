@@ -12,10 +12,6 @@ class StickerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('Проверяем количество стикеров которые пришли в компонент ${stickers}');
-    for (var i = 0; i < stickers.length; i++) {
-      debugPrint('Имя стикера ${stickers[i].name}');
-    }
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return SizedBox(
       height: 200,
