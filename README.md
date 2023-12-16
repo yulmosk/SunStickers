@@ -4,18 +4,23 @@
 Учебный Flutter проект.
 В ветке main реализована верстка нескольких экранов. 
 Верстку предлагается использовать как тренажер для освоения и отработки нюансов бизнес логики.
-Огласим планы по тренирке бизнес логики:
+<br/>
+Бизнес логику будем реализовыввать следующими средствами:
 
 <table>
 <tr>
 <td>
-<a href="#banner"><img align="left" src="https://raw.githubusercontent.com/xnbox/DeepfakeHTTP/main/img/image1.png" width="190"></a>
-<h3>What are people using it for?</h3>
+<a href="#banner"><img align="left" src="assets/images/dinosaur.png" width="190"></a>
+<h3>План:</h3>
 <ul>
-    <li>Creating the product PoC or demo before even starting out with the backend</li>
-    <li>REST, GraphQL, and other APIs mocking and testing</li>
-    <li>Hiding critical enterprise infrastructure behind a simple static facade</li>
-    <li>Hacking and fine-tuning HTTP communications on both server and client sides</li>
+    <li>Без использования дополнительных библиотек</li>
+    <li>Бизнес логика на GetX</li>
+    <li>Бизнес логика на BLoC</li>
+    <li>Бизнес логика на Cubit</li>
+    <li>Бизнес логика на MobX</li>
+    <li>Бизнес логика на Redux</li>
+    <li>Бизнес логика на Provider</li>
+    <li>Бизнес логика на Riverpod</li>
 </ul>
 <img width="1000" height="0">
 </td>
@@ -23,7 +28,7 @@
 </table>
 
 
-Описание вспомогательных веток:
+Описание основных веток:
 
 ## Ветка main
 
