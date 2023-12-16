@@ -11,6 +11,9 @@
 <tr>
 <td>
 <a href="#banner"><img align="left" src="assets/images/dinosaur.png" width="190" style="margin-bottom:100px; margin-right:20px;"></a>
+<img width="50%" height="0">
+</td>
+<td>
 <h3>План:</h3>
 <ul>
     <li>Без использования дополнительных библиотек</li>
@@ -22,7 +25,6 @@
     <li>Бизнес логика на Provider</li>
     <li>Бизнес логика на Riverpod</li>
 </ul>
-<img width="1000" height="0">
 </td>
 </tr>
 </table>
