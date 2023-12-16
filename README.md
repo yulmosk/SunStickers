@@ -10,7 +10,7 @@
 <table>
 <tr>
 <td>
-<a href="#banner"><img align="left" src="assets/images/dinosaur.png" width="200"></a>
+<a href="#banner"><img align="left" src="assets/images/dinosaur.png" width="190" style="margin-bottom:100px; margin-right:20px;"></a>
 <h3>План:</h3>
 <ul>
     <li>Без использования дополнительных библиотек</li>
