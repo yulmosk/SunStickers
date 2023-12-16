@@ -2,7 +2,25 @@
 
 # Стикеры
 Учебный Flutter проект.
-В ветке main реализована верстка нескольких экранов. Верстку предполагается использовать как основу реализации бизнес лонгики.
+В ветке main реализована верстка нескольких экранов. 
+Верстку предлагается использовать как тренажер для освоения и отработки нюансов бизнес логики.
+Огласим планы по тренирке бизнес логики:
+
+<table>
+<tr>
+<td>
+<a href="#banner"><img align="left" src="https://raw.githubusercontent.com/xnbox/DeepfakeHTTP/main/img/image1.png" width="190"></a>
+<h3>What are people using it for?</h3>
+<ul>
+    <li>Creating the product PoC or demo before even starting out with the backend</li>
+    <li>REST, GraphQL, and other APIs mocking and testing</li>
+    <li>Hiding critical enterprise infrastructure behind a simple static facade</li>
+    <li>Hacking and fine-tuning HTTP communications on both server and client sides</li>
+</ul>
+<img width="1000" height="0">
+</td>
+</tr>
+</table>
 
 
 Описание вспомогательных веток:
