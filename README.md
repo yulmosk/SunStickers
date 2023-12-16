@@ -24,12 +24,8 @@
     <li>Бизнес логика на Provider</li>
     <li>Бизнес логика на Riverpod</li>
 </ul>
-<br/>
-</td>
-</tr>
-<tr>
-<td>
 <img width="1000" height="0">
+<br/>
 </td>
 </tr>
 </table>
