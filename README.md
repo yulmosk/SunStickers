@@ -1,8 +1,11 @@
-# sun_stickers
+# Стикеры
+Учебный Flutter проект.
+В ветке main реализована верстка нескольких экранов. Верстку предполагается использовать как основу реализации бизнес лонгики.
 
-A new Flutter project.
 
-## Getting Started
+Описание вспомогательных веток:
+
+## Ветка main
 
 This project is a starting point for a Flutter application.
 
