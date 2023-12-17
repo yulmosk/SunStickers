@@ -32,7 +32,9 @@
 </tr>
 </table>
 
-:bulb:  :star: :classical_building: :mag_right:  :test_tube:
+###:bulb:  ###:star: ###:classical_building: ###:mag_right:  ###:test_tube: ###:toolbox:
+
+<br/>
 Описание основных веток:
 
 ## Ветка :mag_right: main
