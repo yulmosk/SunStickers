@@ -32,7 +32,7 @@
 </tr>
 </table>
 
-:bulb:  :star:
+:bulb:  :star: :classical_building: :mag_right:  :test_tube:
 Описание основных веток:
 
 ## Ветка :mag_right: main
@@ -55,6 +55,31 @@ Finally, agnostic obsession often involves using **Kubernetes** (K8s) for cloud 
 
 In summary, agnostic obsession is a powerful approach that allows for creating highly flexible and adaptable software that can be easily moved and deployed in different environments. Using event-sourcing, ORM, Containers, and K8s, it is possible to build resilient, scalable, and easy-to-maintain systems.
 
+```csharp
+[Fact]
+public void CreateCartShouldRaiseCartCreated()
+    => Given<ShoppingCart>()
+        .When<Command.CreateCart>(new(_cartId, _customerId))
+        .Then<DomainEvent.CartCreated>(
+            @event => @event.CartId.Should().Be(_cartId),
+            @event => @event.CustomerId.Should().Be(_customerId),
+            @event => @event.Status.Should().Be(CartStatus.Active));
+```
+
+
+> CQRS stands for Command and Query Responsibility Segregation, a pattern that separates read and update operations for a data store. Implementing CQRS in your application can maximize its
+> performance, scalability, and security. The flexibility created by migrating to CQRS allows a system to better evolve over time and prevents update commands from causing merge conflicts at the
+> domain level.
+>
+> Benefits of CQRS include:
+>
+> - **Independent scaling**. CQRS allows the read and write workloads to scale independently, and may result in fewer lock contentions.
+> - **Optimized data schemas**. The read side can use a schema that is optimized for queries, while the write side uses a schema that is optimized for updates.
+> - **Security**. It's easier to ensure that only the right domain entities are performing writes on the data.
+> - **Separation of concerns**. Segregating the read and write sides can result in models that are more maintainable and flexible. Most of the complex business logic goes into the write model. The
+    > read model can be relatively simple.
+> - **Simpler queries**. By storing a materialized view in the read database, the application can avoid complex joins when querying.
+>
 </details>
 
 ## Ветка state_structure_stateless
