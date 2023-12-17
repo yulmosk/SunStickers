@@ -85,3 +85,5 @@ public void CreateCartShouldRaiseCartCreated()
 </details>
 
 ## Ветка state_structure_stateless
+
+🧰 
