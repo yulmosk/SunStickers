@@ -86,4 +86,4 @@ public void CreateCartShouldRaiseCartCreated()
 
 ## Ветка state_structure_stateless
 
-🧰 
+🧰 :toolbox:
