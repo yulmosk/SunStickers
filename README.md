@@ -32,7 +32,8 @@
 </tr>
 </table>
 
-###:bulb:  ###:star: ###:classical_building: ###:mag_right:  ###:test_tube: ###:toolbox:
+### :bulb:  ### :star: ### :classical_building: ### :mag_right:  ### :test_tube: ### :toolbox:
+### :book:
 
 <br/>
 Описание основных веток:
