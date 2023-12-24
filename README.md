@@ -45,7 +45,7 @@ doctor --verbose
 <details>
     <summary> :warning: Правка для Material 3 </summary>
 
-### :warning: Правка для Material 3
+### Правка для Material 3
 
 Верстка в учебнике реализована в условиях Material 2. В ветке main сделана правка, отменяющая Мaterial 3 
 Листинг файла lib >> ui_kit >> app_theme.dart
@@ -453,4 +453,4 @@ class StickerState {
 }
 ```
 
-На основем этой ветки удобно реализовать бизнес логику приложения на **GetX** и **MobX** 
+На основем этой ветки удобно реализовать бизнес логику приложения на **BLoC**, **Cubit**, **Provider**, **Riverpod**, **Redux**
