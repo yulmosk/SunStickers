@@ -40,7 +40,8 @@ doctor --verbose
 
 ## Ветка :star: main
 
-- [Учебник](https://yulmosk.github.io/SunStickers/tutorials/Stickers.pdf) - В учебнике пошагово рассмотренно создание верстки проекта. В главе 8 учебника бизнес логика приложения реализована без дополнительных библиотек.
+- [Учебник](https://yulmosk.github.io/SunStickers/tutorials/Stickers.pdf) - В учебнике пошагово рассмотренно создание верстки проекта (Главы 1-7). В главе 8 учебника бизнес логика приложения реализована без дополнительных библиотек.
+
 <details>
     <summary> :warning: Правка для Material 3 </summary>
 
@@ -65,9 +66,31 @@ class AppTheme {
   );
 }
 ```
-
+Эта правка - минимальное изменение в коде, позволяющее пользоваться учебником.
 </details>
 
-## Ветка state_structure_stateless
+## Ветка :star: state_structure_stateless
 
-Для упрощения перехода от логики на основе setState к использованию  библиотек, в ветке state_structure_stateless виджеты экранов преобразованы со StatefulWidget на StatelessWidget.  
+Для упрощения перехода от логики на основе setState к использованию  библиотек, в ветке state_structure_stateless виджеты экранов преобразованы со StatefulWidget на StatelessWidget.
+В файле sticker_state.dart предлагается список переменных, методов и вспомогательных методов на основе которых предлагается реализовать логику приложения.
+В завершении файла зафиксированы 14 шагов логики, которые надо реализовывать.
+
+Листинг файла lib >> states >> sticker_state.dart
+
+```dart
+class AppTheme {
+  const AppTheme._();
+
+  static ThemeData lightTheme = ThemeData(
+    useMaterial3: false,
+    brightness: Brightness.light,
+    //...
+  );
+
+  static ThemeData darkTheme = ThemeData(
+  useMaterial3: false,
+  brightness: Brightness.dark,
+    //...
+  );
+}
+```
